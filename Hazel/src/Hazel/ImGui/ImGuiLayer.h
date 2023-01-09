@@ -24,8 +24,6 @@ namespace Hazel {
 		void BlockEvents(bool block) { m_BlockEvents = block; }
 		
 		void SetDarkThemeColors();
-
-		uint32_t GetActiveWidgetID() const;
 	private:
 		bool m_BlockEvents = true;
 	};

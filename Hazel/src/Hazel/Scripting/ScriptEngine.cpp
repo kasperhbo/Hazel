@@ -17,8 +17,6 @@
 #include "Hazel/Core/Buffer.h"
 #include "Hazel/Core/FileSystem.h"
 
-#include "Hazel/Project/Project.h"
-
 namespace Hazel {
 
 	static std::unordered_map<std::string, ScriptFieldType> s_ScriptFieldTypeMap =
@@ -174,9 +172,7 @@ namespace Hazel {
 			HZ_CORE_ERROR("[ScriptEngine] Could not load Hazel-ScriptCore assembly.");
 			return;
 		}
-		
-		auto scriptModulePath = Project::GetAssetDirectory() / Project::GetActive()->GetConfig().ScriptModulePath;
-		status = LoadAppAssembly(scriptModulePath);
+		status = LoadAppAssembly("SandboxProject/Assets/Scripts/Binaries/Sandbox.dll");
 		if (!status)
 		{
 			HZ_CORE_ERROR("[ScriptEngine] Could not load app assembly.");

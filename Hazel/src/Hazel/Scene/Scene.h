@@ -35,7 +35,7 @@ namespace Hazel {
 		void OnUpdateEditor(Timestep ts, EditorCamera& camera);
 		void OnViewportResize(uint32_t width, uint32_t height);
 
-		Entity DuplicateEntity(Entity entity);
+		void DuplicateEntity(Entity entity);
 
 		Entity FindEntityByName(std::string_view name);
 		Entity GetEntityByUUID(UUID uuid);
